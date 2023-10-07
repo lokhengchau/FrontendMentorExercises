@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 40vh;
+    background-color: var(--pale-blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    max-width: 450px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.hero-img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.content-div {
+    margin: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.subtitle {
+    padding: 0 30px;
+    text-align: center;
+    color: var(--desaturated-blue);
+    line-height: 1.6rem;
+}
+
+.option-div {
+    background-color: var(--very-pale-blue);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.change {
+    margin-left: auto;
+    color: var(--bright-blue);
+}
+
+.change:hover {
+    text-decoration: none;
+    filter: opacity( 40%);
+}
+
+.plan-title {
+    font-size: 1rem;
+    color: var(--dark-blue);
+}
+
+.plan-price {
+    color: var(--desaturated-blue);
+}
+
+#confirm {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    background-color: var(--bright-blue);
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 700;
+    padding: 15px;
+}
+
+#confirm:hover {
+    cursor: pointer;
+    filter: opacity( 40%);
+}
+
+.cancel {
+    text-align: center;
+    font-weight: 700;
+    color: var(--desaturated-blue);
+    text-decoration: none;
+}
+
+.cancel:hover {
+    color: var(--dark-blue);
+}
+
+@media screen and (max-width: 450px) {
+    body{
+        background-image: url(./images/pattern-background-mobile.svg);
+    }
+
+    .subtitle {
+        padding: 0px;
+    }
+
+    .content-div {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

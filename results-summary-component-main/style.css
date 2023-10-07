@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --light-red-bg: hsla(0, 100%, 67%, .1);
+    --orangey-yellow-bg: hsla(39, 100%, 56%, .1);
+    --green-teal-bg: hsla(166, 100%, 37%, .1);
+    --cobalt-blue-bg: hsla(234, 85%, 45%, .1);
+
+    --background-gradient-1: hsl(252, 100%, 67%);
+    --background-gradient-2: hsl(241, 81%, 54%);
+    --cirlce-gradient-1: hsla(256, 72%, 46%, 1);
+    --cirlce-gradient-2: hsla(241, 72%, 46%, 0);
+
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    max-width: 800px;
+    display: flex;
+    box-shadow: 10px 10px 10px 5px rgb(238, 238, 238);
+    border-radius: 30px;
+}
+
+.overall-container {
+    background: linear-gradient(var(--background-gradient-1), var(--background-gradient-2));
+    padding: 40px;
+    border-radius: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.overall-header {
+    font-size: 1.5rem;
+    color: var(--light-lavender);
+}
+
+.overall-score-circle {
+    background: linear-gradient(var(--cirlce-gradient-1), var(--cirlce-gradient-2));
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overall-score {
+    color: var(--white);
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.overall-score-circle .score-denominator {
+    color: var(--light-lavender);
+}
+
+.rating {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.rating-description {
+    color: var(--light-lavender);
+    text-align: center;
+}
+
+.summary-container {
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--white);
+    border-radius: 0 30px 30px 0;
+}
+
+.summary-header {
+    font-size: 1.5rem;
+    color: var(--dark-gray-blue);
+}
+
+.subscore-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.subscore-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.subscore-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.reaction {
+    background-color: var(--light-red-bg);
+}
+
+.reaction .subscore-title {
+    color: var(--light-red);
+}
+
+.memory {
+    background-color: var(--orangey-yellow-bg);
+}
+
+.memory .subscore-title{
+    color: var(--orangey-yellow);
+}
+
+.verbal {
+    background-color: var(--green-teal-bg);
+}
+
+.verbal .subscore-title {
+    color: var(--green-teal);
+}
+
+.visual {
+    background-color: var(--cobalt-blue-bg);
+}
+
+.visual .subscore-title {
+    color: var(--cobalt-blue);
+}
+
+.subscore-row p {
+    margin-left: auto;
+}
+
+.subscore-score {
+    font-weight: 700;
+
+}
+
+.subscore-row .score-denominator {
+    color: var(--dark-gray-blue);
+}
+
+button.continue {
+    margin-top: auto;
+    width: 100%;
+    background-color: var(--dark-gray-blue);
+    border: none;
+    border-radius: 50px;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white)
+}
+
+button.continue:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width:650px) {
+    body {
+        height: auto;
+    }
+
+    .main-container {
+        flex-direction: column;
+        border-radius: none;
+    }
+
+    .overall-container {
+        border-radius: 0 0 30px 30px;
+    }
+}
