@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --white: hsl(0, 0%, 100%);
+    --main-bg-color: hsl(217, 54%, 11%);
+    --card-bg-color: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Outfit', sans-serif;
+    font-size: min(5.143vw, 18px);
+}
+
+body {
+    background-color: var(--main-bg-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    background-color: var(--card-bg-color);
+    border-radius: 20px;
+    padding: min(5.714vw, 20px);
+    width: 350px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card-main-img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.card-content {
+    color: var(--soft-blue);
+}
+
+.card-detail-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-price-container {
+    display: flex;
+    color: var(--cyan);
+    font-weight: 400;
+    gap: 5px;
+}
+
+.time-remaining-container {
+    display: flex;
+    color: var(--soft-blue);
+    gap: 5px;
+}
+
+.card-container hr {
+    border-color: var(--line-color);
+    background-color: var(--line-color);
+    color: var(--line-color);
+}
+
+.card-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--soft-blue);
+}
+
+.card-author img {
+    width: 15%;
+    height: 15%;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.author {
+    color: var(--white);
+}
+
+
+
