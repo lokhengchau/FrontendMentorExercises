@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-wrapper {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 10px 10px var(--light-gray);
+    border-radius: 10px;
+    margin: 40px 10px;
+}
+
+.introduction {
+    padding: 30px;
+}
+
+.introduction h1 {
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 25px
+}
+
+.introduction p:first-of-type {
+    color: var(--bright-yellow);
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.introduction p:not(:first-of-type) {
+    color: var(--grayish-blue);
+    font-size: 1.05rem;
+    line-height: 140%;
+}
+
+.second-row-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.subscription {
+    background-color: hsl(179, 63%, 35%);
+    color: var(--light-gray);
+    padding: 30px;
+    flex: 1;
+    max-width: 50%;
+    border-radius: 0 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.subscription h2 {
+    font-weight: 600;
+}
+
+.subscription .price {
+    font-size: 3rem;
+}
+
+.subscription p:first-of-type {
+    display: flex;
+    align-items: center;
+    margin-bottom: -30px;
+}
+
+#sign-up {
+    border: none;
+    background-color: var(--bright-yellow);
+    width: 100%;
+    padding: 15px;
+    color: var(--light-gray);
+    font-weight: 600;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 5px  hsl(179, 63%, 30%);
+    cursor: pointer;
+}
+
+.why-us {
+    background-color: var(--cyan);
+    color: var(--light-gray);
+    padding: 30px;
+    flex: 1;
+    max-width: 50%;
+    border-radius: 0 0 10px 0;
+}
+
+.why-us h2 {
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.why-us ul {
+    list-style-type: none;
+}
+
+.why-us ul li {
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 635px) {
+    body {
+        height: 100%
+    }
+
+    .second-row-wrapper {
+        flex-direction: column;
+    }
+
+    .subscription {
+        max-width: 100%;
+        justify-content: baseline;
+        gap: 30px;
+        border-radius: 0;
+    }
+
+    .why-us {
+        max-width: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+}
