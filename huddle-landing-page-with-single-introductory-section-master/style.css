@@ -75,6 +75,10 @@ body {
     width: 24.306vw;
 }
 
+#register:hover {
+    cursor: pointer;
+}
+
 footer {
     display: flex;
     gap: 15px;
