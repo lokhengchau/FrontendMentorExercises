@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: min(1.143vw, 16px);
+}
+
+body {
+    background-image: url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--violet);
+    height: 100vh;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.main-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+
+.main-wrapper img {
+    width: 100%;
+}
+
+.mockup {
+    flex: 1.2;
+}
+
+.content {
+    flex: 1;
+}
+
+.content h1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.content p {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    line-height: 150%;
+    font-size: 1.2rem;
+}
+
+#register {
+    border: none;
+    background-color: white;
+    color: var(--violet);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 15px 50px;
+    border-radius: 50px;
+    margin-top: 20px;
+    box-shadow: 0 5px 5px 5px hsl(257, 38%, 46%);
+    width: 24.306vw;
+}
+
+footer {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+footer .social-icon:first-of-type {
+    margin-left: auto;
+}
+
+@media screen and (max-width: 950px) {
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        background-image: url(./images/bg-mobile.svg);
+        height: 100%;
+        justify-content: baseline;
+        gap: 50px;
+    }
+
+    .huddle-logo {
+        width: 180px;
+    }
+
+    .main-wrapper {
+        flex-direction: column;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .content h1{
+        font-size: 2.5rem;
+    }
+
+    .content p {
+        font-size: 1.5rem;
+    }
+
+    #register {
+        width: 400px;
+    }
+
+    footer {
+        justify-content: center;
+    }
+
+    footer .social-icon:first-of-type {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    html,
+    #register {
+        font-size: min(2.963vw, 16px);
+    }
+
+    .huddle-logo {
+        width: min(33.33vw, 180px);
+    }
+
+    #register {
+        width: min(55.556vw, 300px);
+        padding: 2.778vw ,9.259vw;
+    }
+
+}
