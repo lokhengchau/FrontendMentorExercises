@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    color: var(--white);
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: var(--very-dark-blue);
+    border-radius: 20px;
+    padding: min(8.571vw, 30px);
+    width: 360px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 50px 20px;
+}
+
+.star-logo {
+    padding: 10px;
+    background-color: var(--dark-blue);
+    border-radius: 50%;
+    width: 35px;
+    margin-bottom: 10px;
+}
+
+.main p {
+    line-height: 150%;
+    color: var(--light-grey);
+    margin-top: -10px;
+}
+
+.rating-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating {
+    background-color: var(--dark-blue);
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating[data-selected='false'] {
+    color: var(--light-grey);
+}
+
+.rating[data-selected='true'] {
+    color: var(--white);
+    background-color: var(--light-grey);
+}
+
+.rating:hover {
+    cursor: pointer;
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+#submit {
+    width: 100%;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 100px;
+    color: var(--white);
+    padding: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    disabled;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--orange);  
+}
+
+.submitted-wrapper {
+    align-items: center;
+    text-align: center;
+}
+
+.thankyou-image {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+
+p.rating-summary {
+    color: var(--orange);
+    font-size: 1rem;
+    padding: 5px 40px;
+    background-color: var(--dark-blue);
+    line-height: calc(10px + 1rem);
+    border-radius: 50px;
+}
+
+.submitted-wrapper {
+    display: none;
+}
+
