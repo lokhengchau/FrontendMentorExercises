@@ -117,7 +117,19 @@ hr {
     border-color: var(--divider);
 }
 
+@media screen and (max-height: 900px) and (max-width: 955px){
+
+    body {
+        height: 900px;
+    }
+
+    .main-wrapper {
+        transform: translateY(50px);
+    }
+}
+
 @media screen and (max-width: 955px) {
+
     .main-wrapper {
         flex-direction: column;
         max-width: 350px;
@@ -149,15 +161,5 @@ hr {
 
     .faq-wrapper h1 {
         text-align: center;
-    }
-}
-
-@media screen and (max-height: 1000px) {
-    body {
-        height: 100%;
-    }
-
-    .main-wrapper {
-        margin: 150px 5px max(110px, calc(100vh - 795px)) 5px;
     }
 }
