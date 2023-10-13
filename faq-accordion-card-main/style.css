@@ -87,18 +87,20 @@ body {
 }
 
 .faq-answer {
+    position: relative;
     color: var(--text-dark-grayish-blue);
     margin-top: 15px;
     line-height: 160%;
     overflow: hidden;
     opacity: 0;
     max-height: 0;
-    transition: max-height .5s ease-in, opacity .5s ease;
+    transition: max-height .5s ease-in, opacity .1s linear;
 }
 
 .display-show {
     opacity: 1;
     max-height: 3.16rem;
+    top: 0px;
 }
 
 .arrow {
