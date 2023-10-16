@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+<body>
+  <div class="container">
+    <div class="content-wrapper">
+      <h1>Learn to code by watching others</h1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. </p>
+    </div>
+    <div class="signup-wrapper">
+      <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+      <form action="#" method="post" novalidate>
+        <div class="input-field-wrapper">
+          <input type="text" name="firstname" id="first-name" placeholder="First Name" autocomplete="given-name" required>
+          <p class="input-error first-name-error">First name required</p>
+        </div>
+        <div class="input-field-wrapper">
+          <input type="text" name="lastname" id="last-name" placeholder="Last Name" autocomplete="family-name" required>
+          <p class="input-error last-name-error">Last name required</p>
+        </div>
+        <div class="input-field-wrapper">
+          <input type="email" name="email" id="email" placeholder="Email Address" autocomplete="email" required>
+          <p class="input-error email-error">Invalid email</p>
+        </div>
+        <div class="input-field-wrapper">
+          <input type="password" name="password" id="password" placeholder="Password (min 12 chars)" required>
+          <p class="input-error password-error">Password length must be at least 12</p>
+        </div>
+        <button type="submit">Claim your free trial</button>
+        <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
