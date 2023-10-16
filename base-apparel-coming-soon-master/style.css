@@ -66,11 +66,6 @@ body > div {
     width: 450px;
 }
 
-form {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
 
 #email {
     height: 50px;
@@ -97,7 +92,7 @@ form {
     width: 100px;
     border: none;
     border-radius: 25px;
-    transform: translateX(-50%);
+    transform: translate(-60px, 4px);
 }
 
 #submit:hover {
@@ -105,11 +100,11 @@ form {
 }
 
 .invalid-message {
-    position: absolute;
     font-size: .8rem;
-    top: 55px;
-    left: 63px;
     display: none;
+    position: relative;
+    left: 20px;
+    top: 10px;
 }
 
 .invalid-message-show {
@@ -174,23 +169,29 @@ form {
     }
 
     form {
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
         padding-bottom: 50px;
+    }
+
+    .email-input-wrapper {
+        position: relative;
+        transform: translateX(-28px);
     }
 
     #email {
         width: 250px;
-        transform: translateX(20px);
     }
 
     #submit {
-        transform: translateX(-20px);
+        position: absolute;
+        transform: translateX(-56px);
     }
 
-    .invalid-message {
-        position: absolute;
-        font-size: .8rem;
-        top: 15px;
-        left: 18px;
+    p.invalid-message {
+        margin: 0px;
+        transform: translateX(-28px);
     }
 }
