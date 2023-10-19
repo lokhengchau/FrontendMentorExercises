@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+  <div class="main-container">
+    <form novalidate>
+      <div class="input-row">
+        <div class="input-field">
+          <label for="day">DAY</label>
+          <input type="number" name="day" id="day" min="1" max="31" placeholder="DD" required>
+          <span class="error day-error invisible">Must be a valid day</span>
+        </div>
+        <div class="input-field">
+          <label for="month">MONTH</label>
+          <input type="number" name="month" id="month" min='1' max='12' placeholder="MM" required>
+          <span class="error month-error invisible">Must be a valid month</span>
+        </div>
+        <div class="input-field">
+          <label for="year">YEAR</label>
+          <input type="number" name="year" id="year" min='0' max='2023' placeholder="YYYY" required>
+          <span class="error year-error invisible">Must be a valid year</span>
+        </div>
+      </div>
+      <div class="divider">
+        <hr>
+        <button type='submit' id="btnSumbit"><img src="./assets/images/icon-arrow.svg"></button>
+      </div>
+    </form>
+    <div class="result">
+      <p><span class="year-result">--</span><span class="year-unit"> years</span> </p>
+      <p><span class="month-result">--</span><span class="month-unit"> months</span></p>
+      <p><span class="day-result">--</span><span class="day-unit"> days</span></p>
+    </div>
+  </div>
+</body>
+</html>

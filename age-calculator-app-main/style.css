@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --l-red: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --l-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px
+}
+
+body {
+    background-color: var(--off-white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    background-color: var(--white);
+    width: 700px;
+    border-radius: 30px 30px 135px 30px;
+    padding: 60px 30px 30px 30px;
+    margin: 20px 10px;
+}
+
+.input-row {
+    display: flex;
+    gap: 25px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 150px;
+}
+
+.input-field label {
+    font-size: .5rem;
+    font-weight: 700;
+
+}
+
+.input-field .error {
+    font-size: .4rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--l-red);
+}
+
+/* Chrome, Safari, Edge, Opera */
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    --moz-appearance: textfield;
+}
+
+.input-field input {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px;
+    border: 1px solid var(--l-grey);
+    border-radius: 5px;
+}
+
+.input-field label.label-error {
+    color: var(--l-red);
+}
+
+.input-field input.input-error {
+    border-color: var(--l-red);
+}
+
+.input-field input:focus.input-error {
+   outline-color: var(--l-red);
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.divider {
+    position: relative;
+    margin: 30px 0 20px 0;
+}
+
+.divider hr {
+    border-color: var(--l--grey);
+    background-color: var(--l-grey);
+    color: var(--l-grey);
+}
+
+.divider button {
+    background-color: var(--purple);
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 20px;
+    transition: scale .05s linear;
+}
+
+.divider button:hover {
+    cursor: pointer;
+}
+
+.divider button:active {
+    transform: translateY(-50%) scale(.98);
+}
+
+.result {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 800;
+}
+
+.result p span:first-child {
+    color: var(--purple);
+}
+
+@media screen and (max-width: 720px) {
+
+    html {
+        font-size: 24px;
+    }
+
+    .main-container {
+        width: auto;
+    }
+
+    .input-row {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .input-field {
+        flex-shrink: 1;
+        width: 28%;
+    }
+
+    .input-field input {
+        font-size: .9rem;
+    }
+
+    .divider {
+        margin: 70px 0
+    }
+
+    .divider button {
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    .divider button:active {
+        transform: translate(50%, -50%) scale(.98);
+    }
+
+    .result {
+        font-size: 2rem;
+    }
+}
