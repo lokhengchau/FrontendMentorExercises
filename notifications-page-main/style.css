@@ -59,10 +59,12 @@ header .unread-number {
     color: var(--white);
     border-radius: 3px;
     font-weight: 800;
+    transition: all .15s linear;
 }
 
 .invis {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
 }
 
 header button {
@@ -80,6 +82,7 @@ header button {
     display: flex;
     gap: 10px;
     padding: min(3vw, 15px);
+    transition: all .15s linear;
 }
 
 .notif:hover {
@@ -113,6 +116,10 @@ header button {
 .notif div p {
     color: var(--d-grayish-blue);
     line-height: 140%;
+}
+
+.notif div .red-circle {
+    transition: all .15s linear;
 }
 
 .notif div .sender-name {
