@@ -49,6 +49,7 @@ header ul {
 header ul li a {
     text-decoration: none;
     color: var(--d-grayish-blue);
+    cursor: pointer;
 }
 
 main {
@@ -157,6 +158,10 @@ main .news-section article p {
 
 .hidden {
     display: none;
+}
+
+.menu-icon {
+    cursor: pointer;
 }
 
 @media screen and (max-width:1150px){
