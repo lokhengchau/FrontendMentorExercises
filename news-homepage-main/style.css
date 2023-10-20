@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --d-grayish-blue: hsl(236, 13%, 42%);
+    --v-d-blue: hsl(240, 100%, 5%);
+    
+    --content-width: 1140px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px
+}
+
+body {
+    background-color: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    padding: 40px 0;
+    width: var(--content-width);
+    position: fixed;
+    background-color: var(--off-white);
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--d-grayish-blue);
+}
+
+main {
+    width: var(--content-width);
+    padding-top: 100px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 25px;
+    grid-template-areas: 
+        "front-image front-image news-section"
+        "front-header front-section news-section";
+}
+
+main .front-image {
+    grid-area: front-image;
+    width: 100%;
+}
+
+main h1 {
+    grid-area: front-header;
+    font-size: 4rem;
+    line-height: 95%;
+    width: 100%;
+}
+
+main .front-section {
+    grid-area: front-section;
+}
+
+main .front-section p {
+    line-height: 180%;
+    color: var(--d-grayish-blue);
+    margin-bottom: 30px;
+}
+
+main .front-section button {
+    border: none;
+    background-color: var(--soft-red);
+    padding: 10px 30px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+main .news-section {
+    grid-area: news-section;
+    background-color: var(--v-d-blue);
+    padding: 0 15px;
+   
+}
+
+main .news-section h2 {
+    color: var(--soft-orange);
+    font-size: 2.5rem;
+    margin: 20px 0 30px 0;
+}
+
+main .news-section hr {
+    border-color: var(--d-grayish-blue);
+}
+
+main .news-section article {
+    margin: 25px 0;
+}
+
+main .news-section article h3 {
+    color: white;
+}
+
+main .news-section article p {
+    color: var(--grayish-blue);
+    margin-top: 15px;
+    line-height: 180%;
+}
+
+.top-article {
+    display: flex;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.top-article img {
+    width: 25%;
+}
+
+.top-article div span {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--grayish-blue);
+}
+
+.top-article div h3 {
+    font-weight: 800;
+    color: var(--v-d-blue);
+    margin: 10px 0;
+}
+
+.top-article div p {
+    line-height: 180%;
+    color: var(--d-grayish-blue);
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width:1150px){
+    :root {
+        --content-width: 760px;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 25px;
+        grid-template-areas: 
+            "front-image front-image"
+            "front-header news-section"
+            "front-section news-section";
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    :root {
+        --content-width: auto;
+    }
+
+    header {
+        width: calc(100% - 40px);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .front-image {
+        content: url('./assets/images/image-web-3-mobile.jpg')
+    }
+}
+
+@media screen and (max-width: 590px) {
+
+    header nav {
+        position: absolute;
+        right: 20px;
+        top: 80px;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 0;
+        text-align: right;
+    }
+
+    header ul li{
+        background-color: var(--v-d-blue);
+        padding: 10px 30px;
+    }
+
+    header ul li:hover {
+        background-color: var(--soft-orange);
+    }
+
+    header ul li a {
+        color: white;
+    }
+}
