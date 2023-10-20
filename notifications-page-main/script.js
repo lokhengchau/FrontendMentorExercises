@@ -8,8 +8,8 @@
         if (unreadNotifs) {
             unreadNotifs.forEach((unreadNotif) => {
                 unreadNotif.classList.remove('unread');
-                unreadText = unreadNotif.querySelector('div p');
-                unreadText.textContent = unreadText.textContent.replace(' 🔴', '')
+                redCircle = unreadNotif.querySelector('div p .red-circle');
+                redCircle.classList.add('invis');
             });
             unreadNumber.classList.add('invis');
         }
