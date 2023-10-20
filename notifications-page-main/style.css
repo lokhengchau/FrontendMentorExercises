@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --v-l-grayish-blue: hsl(210, 60%, 98%);
+    --l-grayish-blue-1: hsl(211, 68%, 94%);
+    --l-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --d-grayish-blue: hsl(219, 12%, 42%);
+    --v-d-blue: hsl(224, 21%, 14%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: min(3.2vw, 16px);
+}
+
+body {
+    background-color: var(--v-l-grayish-blue);
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 700px;
+    margin: 30px;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: min(4vw, 20px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header {
+    display: flex;
+    gap: 20px;
+    padding: 0 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header .unread-number {
+    font-size: .9rem;
+    padding: 2px 8px;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 3px;
+    font-weight: 800;
+}
+
+.invis {
+    display: none;
+}
+
+header button {
+    margin-left: auto;
+    font-family: inherit;
+    background-color: white;
+    border: none;
+    font-size: 1rem;
+    color: var(--d-grayish-blue);
+    cursor: pointer;
+}
+
+.notif {
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    padding: min(3vw, 15px);
+}
+
+.notif:hover {
+    background-color: var(--v-l-grayish-blue);
+    cursor: pointer;
+}
+
+.notif.unread:hover {
+    background-color: var(--l-grayish-blue-2);
+}
+
+.notif.unread {
+    background-color: var(--l-grayish-blue-1);
+}
+
+.notif .profile-pic {
+    height: min(8.4vw, 42px);
+}
+
+.notif .pic-link {
+    margin-left: auto;
+    height: min(8.4vw, 42px);
+}
+
+.notif div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.notif div p {
+    color: var(--d-grayish-blue);
+    line-height: 140%;
+}
+
+.notif div .sender-name {
+    font-weight: 800;
+    color: var(--v-d-blue);
+}
+
+.notif div .post-link {
+    font-weight: 800;
+    color: var(--d-grayish-blue);
+}
+
+.notif div .page-link {
+    font-weight: 800;
+    color: var(--blue)
+}
+
+.notif div .last-sent {
+    color: var(--grayish-blue);
+}
+
+.notif div .private-message {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid var(--grayish-blue);
+    color: var(--d-grayish-blue);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 700px) {
+    
+    main {
+        margin: 0;
+        min-height: 100vh;
+    }
+}
