@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+
+:root {
+    --s-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --d-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --v-pale-orange: hsl(33, 100%, 98%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: min(3.913vw, 18px);
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background-color: var(--cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-wrapper {
+    margin: 30px 10px;
+    width: min(700px, calc(100vw - 20px));
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.balance {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--s-red);
+    border-radius: 20px;
+    color: var(--v-pale-orange);
+    padding: 20px;
+}
+
+.balance div h1 {
+    font-size: 1rem;
+}
+
+.balance div p {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+section {
+    background-color: var(--v-pale-orange);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+section .graph {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 300px;
+    justify-items: center;
+}
+
+section hr {
+    margin: 30px 0;
+}
+
+section div h2 {
+    font-size: 1rem;
+    color: var(--medium-brown);
+}
+
+.month-summary {
+    display: flex;
+    justify-content: space-between;
+}
+
+.month-summary > p {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.change-from-prev {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.change-from-prev > span {
+    font-weight: 700;
+}
+
+.change-from-prev > p {
+    color: var(--medium-brown);
+}
+
+.bar-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+}
+
+.tooltip {
+    background-color: var(--d-brown);
+    color: var(--v-pale-orange);
+    padding: 5px 0px;
+    margin-bottom: 5px;
+    font-size: min(1rem, calc(100vw * .1346 * .1909));
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.tooltip.hide {
+    visibility: hidden;
+}
+
+.bar {
+    width: 80%;
+    background-color: var(--s-red);
+    border-radius: 5px
+}
+
+.bar.max {
+    background-color: var(--cyan);
+}
+
+.bar:hover {
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.x-title {
+    margin-top: 15px;
+}
