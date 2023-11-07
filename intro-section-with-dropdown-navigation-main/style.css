@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --m-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    background-color: var(--almost-white);
+}
+
+header {
+    padding: 20px 50px;
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    color: var(--m-gray);
+}
+
+.snap-logo {
+    transform: translateY(15%);
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    gap: 40px
+}
+
+.page-links,
+.account-links {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.page-links *,
+.account-links * {
+    color: var(--m-gray);
+    text-decoration: none;
+}
+
+.page-links *:hover,
+.account-links *:hover {
+    color: var(--almost-black);
+    cursor: pointer;;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.feature-dropdown,
+.company-dropdown {
+    position: absolute;
+    top: 50px;
+    width: max-content;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.feature-dropdown {
+    left: -75px;
+}
+
+.company-dropdown {
+    left: -5px;
+}
+
+
+.feature-dropdown ul,
+.company-dropdown ul {
+    list-style: none;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feature-dropdown ul li::before {
+    content: '';
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-right: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.feature-dropdown ul li:nth-child(1)::before {
+    background-image: url('./images/icon-todo.svg');
+}
+
+.feature-dropdown ul li:nth-child(2)::before {
+    background-image: url('./images/icon-calendar.svg');
+}
+
+.feature-dropdown ul li:nth-child(3)::before {
+    background-image: url('./images/icon-reminders.svg');
+}
+
+.feature-dropdown ul li:nth-child(4)::before {
+    background-image: url('./images/icon-planning.svg');
+}
+
+.feature-dropdown ul li a:hover,
+.company-dropdown ul li a:hover{
+    color: var(--almost-black);
+    cursor: pointer;
+}
+
+.account-links {
+    margin-left: auto;
+}
+
+.register-link {
+    padding: 10px 20px;
+    border: 1px solid var(--almost-black);
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    width: 80%;
+    margin: 10px auto;
+    min-height: 80vh;
+}
+
+section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+    padding-right: 100px;
+}
+
+section h1 {
+    font-size: 4rem;
+}
+
+section p {
+    color: var(--m-gray);
+    line-height: 150%;
+}
+
+section .learn-more-link {
+    background-color: var(--almost-black);
+    padding: 20px 40px;
+    width: max-content;
+    border-radius: 5px;
+}
+
+section .learn-more-link a {
+    text-decoration: none;
+    color: var(--almost-white);
+}
+
+section .client-logo-row {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    padding-right: 100px;
+    justify-content: space-between;
+}
+
+.herodiv {
+    flex: 1;
+    background-image: url(./images/image-hero-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 1150px) {
+    main {
+        flex-direction: column-reverse;
+        width: 100vw;
+        align-items: center;
+    }
+
+    .herodiv {
+        background-image: url(./images/image-hero-mobile.png);
+        background-size: contain;
+        flex: none;
+        width: 50%;
+        height: 50vw;
+    }
+
+    section {
+        align-items: center;
+        padding: 0 10vw;
+        text-align: center;
+    }
+
+    section .client-logo-row {
+        position: static;
+        bottom: auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+}
+
+@media screen and (max-width: 600px) {
+
+}
