@@ -20,6 +20,7 @@ html {
 body {
     background-color: var(--almost-white);
     min-height: 100vh;
+    position: relative;
 }
 
 header {
@@ -30,16 +31,18 @@ header {
     width: 100%;
     color: var(--m-gray);
     position: relative;
+    z-index: 55;
 }
 
 .snap-logo {
-    transform: translateY(15%);
+    transform: translateY(30%);
 }
 
 nav {
     flex: 1;
     display: flex;
     gap: 40px;
+    z-index: 60;
 }
 
 nav a {
@@ -107,7 +110,7 @@ nav a {
     width: max-content;
     display: none;
     top: 0;
-    z-index: 1;
+    z-index: 90;
 }
 
 .feature-dropdown {
@@ -197,7 +200,7 @@ section .client-logo-row {
     position: absolute;
     bottom: 0;
     display: flex;
-    width: 100%;
+    width: 100vw;
     padding-right: 100px;
     justify-content: space-evenly;
 }
@@ -222,6 +225,23 @@ section .client-logo-row .client-logo {
 
 .menu-closed {
     content: url("./images/icon-menu.svg");
+}
+
+.overlay {
+    position: absolute;
+    visibility: hidden;
+    width: 100vw;
+    height: 100%;
+    background-color: grey;
+    opacity: 0;
+    top: 0;
+    z-index: 50;
+    transition: all .5s linear;
+}
+
+.overlay.overlayshow {
+    visibility: visible;
+    opacity: .5;
 }
 
 @media screen and (max-width: 1150px) {
@@ -260,13 +280,13 @@ section .client-logo-row .client-logo {
 
     main {
         position: relative;
-        z-index: -1;
+        z-index: -10;
     }
 
     .mobile-menu {
         display: block;
         margin-left: auto;
-        z-index: 2;
+        z-index: 100;
     }
 
     header nav {
@@ -302,6 +322,7 @@ section .client-logo-row .client-logo {
     }
 
     .page-links {
+        margin-top: 20px;
         align-items: start;
     }
 
@@ -353,21 +374,23 @@ section .client-logo-row .client-logo {
     header {
         position: sticky;
         top: 0;
+        left: 0;
         padding-left: 10px;
         padding-right: 10px;
     }
 
     .herodiv {
-        width: 100%;
+        width: 100vw;
         height: 100vw;
     }
 
     section {
-        width: 100%;
+        width: 100vw;
         padding: 20px 10px;
     }
 
     section .client-logo-row {
         padding-right: 0;
     }
+
 }

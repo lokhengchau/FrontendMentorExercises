@@ -2,6 +2,7 @@
     const menuButton = document.querySelector(".mobile-menu");
     const nav = document.querySelector('nav');
     const dropDivs = document.querySelectorAll('.dropdiv');
+    const overlayDiv = document.querySelector('.overlay');
 
     let hideMobileMenu = true;
 
@@ -10,6 +11,7 @@
             nav.classList.remove('slidein');
             nav.classList.remove('slideout');
             menuButton.classList.add('menu-closed');
+            overlayDiv.classList.remove('overlayshow');
             dropDivs.forEach(dropDiv => {
                 dropDiv.nextElementSibling.classList.remove('expand')
                 dropDiv.querySelector('img').classList.remove('rotate');});
@@ -25,6 +27,7 @@
             nav.classList.toggle('slideout');
         }
         menuButton.classList.toggle('menu-closed');
+        overlayDiv.classList.toggle('overlayshow');
     });
 
     dropDivs.forEach(dropDiv => {
