@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 <body>
   <header>
     <img class="snap-logo" src="./images/logo.svg" alt="snap logo">
+    <img class="mobile-menu menu-closed" src="./images/icon-close-menu.svg">
     <nav>
       <div class="page-links">
-        <div class="dropdown">Features <img src="./images/icon-arrow-down.svg">
+        <div class="dropdown">
+          <div class="dropdiv">Features <img src="./images/icon-arrow-down.svg"></div>
           <div class="feature-dropdown">
             <ul>
               <li><a href="#">Todo List</a></li>
@@ -22,7 +25,8 @@
             </ul>
           </div>
         </div>
-        <div class="dropdown">Company <img src="./images/icon-arrow-down.svg">
+        <div class="dropdown">
+          <div class="dropdiv">Company <img src="./images/icon-arrow-down.svg"></div>
           <div class="company-dropdown">
             <ul>
               <li><a href="#">History</a></li>
