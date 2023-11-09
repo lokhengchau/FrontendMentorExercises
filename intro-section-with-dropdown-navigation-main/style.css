@@ -200,7 +200,7 @@ section .client-logo-row {
     position: absolute;
     bottom: 0;
     display: flex;
-    width: 100vw;
+    width: 100%;
     padding-right: 100px;
     justify-content: space-evenly;
 }
@@ -392,5 +392,4 @@ section .client-logo-row .client-logo {
     section .client-logo-row {
         padding-right: 0;
     }
-
 }
