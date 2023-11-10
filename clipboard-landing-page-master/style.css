@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+:root {
+    --strong-cyan: hsl(171, 66%, 44%);
+    --light-blue: hsl(233, 100%, 69%);
+    --d-grayish-blue: hsl(210, 10%, 33%);
+    --grayish-blue: hsl(201, 11%, 66%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: var(--d-grayish-blue);
+    line-height: 150%;
+}
+
+html {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 18px
+}
+
+body {
+    width: 100%;
+}
+
+header::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background-image: url(./images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+header {
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-top: 50px;
+}
+
+header img {
+    padding: 50px 0;
+}
+
+h1.front-header {
+    font-size: 2.2rem;
+}
+
+section {
+    margin: 80px 0;
+}
+
+section.single {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    padding: 0 max(10px, calc(50vw - 360px));
+}
+
+.download-row {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: flex;
+    gap: 20px;
+}
+
+.download-link {
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+.download-link.ios-link {
+    background-color: var(--strong-cyan);
+    box-shadow: 0 10px 6px -6px var(--strong-cyan);
+}
+
+.download-link.android-link {
+    background-color: var(--light-blue);
+    box-shadow: 0 10px 6px -6px var(--light-blue);
+}
+
+.download-link:hover {
+    cursor: pointer;
+}
+
+.download-link:active {
+    transform: scale(.99);
+}
+
+section.computer {
+    display: flex;
+}
+
+.computer-bg-img{
+    flex: 1;
+    min-width: 50%;
+    background-image: url('./images/image-computer.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+}
+
+.computer-descrip {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px max(10px, calc(50vw - 470px)) 40px 80px;
+}
+
+.feature-row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.descrip-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.device-bg-img {
+    width: 100%;
+    height: 500px;
+    background-image: url('./images/image-devices.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+}
+
+.feature-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+
+.feature-card {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.feature-card img {
+    height: 60px;
+    width: 60px;
+}
+
+.company-logo-row {
+    padding: 0 100px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer {
+    background-color: hsl(197, 16%, 92%);
+    padding: 40px max(40px, calc(50vw - 700px));
+    display: flex;
+    gap: max(20px, min(160px, calc(100vw - 1060px)));
+}
+
+footer img {
+    height: 70px;
+    width: 70px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, max(120px, min(200px, calc((100vw - 735px)))));
+    align-items: center;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--d-grayish-blue);
+}
+
+.social-media-icon-row {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+    align-items: center;
+    
+}
+
+.social-media-icon-row img {
+    height: 30px;
+    width: 30px;
+}
+
+@media screen and (max-width: 1290px) {
+    .computer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .computer-bg-img {
+        aspect-ratio: 1 / 1;
+        width: min(700px, 95%);
+    }
+
+    .computer-descrip {
+        padding: 40px;
+    }
+
+    .descrip-card {
+        align-items: center;
+        text-align: center;
+    }
+
+    .device-bg-img {
+        height: auto;
+        aspect-ratio: 1 / .6;
+        width: min(700px, 95%);
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    .download-row {
+        flex-direction: column;
+    }
+
+    .feature-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: initial;
+        max-width: 50%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .footer-links {
+        grid-template-columns: 100%;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .social-media-icon-row {
+        margin-left: initial;
+        gap: 40px;
+    }
+}
